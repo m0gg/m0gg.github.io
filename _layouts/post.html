@@ -11,4 +11,26 @@
     {{ content }}
   </article>
 
+  <div id="gplus-container" class="collapsed">
+    <g:plus action="share"
+            href="{{ site.url }}#{{ page.id }}">
+    </g:plus>
+    <g:comments href="{{ site.url }}#{{ page.id }}"
+                width="740"
+                first_party_property="BLOGGER"
+                view_type="FILTERED_POSTMOD">
+    </g:comments>
+  </div>
+  <div id="expander">
+    <div>Show me more!</div>
+  </div>
+  <script>
+    gapi.comments.go();
+    gapi.plus.go();
+    var el = $('#expander');
+    el.on('click', function() {
+      el.remove();
+      $('#gplus-container').removeClass('collapsed');
+    });
+  </script>
 </div>

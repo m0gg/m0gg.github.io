@@ -1,0 +1,23 @@
+.collapsed {
+  height: 220px;
+  overflow: hidden;
+}
+#expander {
+  cursor: pointer;
+  height: 40px;
+  width: 740px;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  top: -10px;
+  position: relative;
+  background: transparent url('/img/cut.png');
+
+  div {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+}
