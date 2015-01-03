@@ -2,7 +2,7 @@
 layout: post
 title:  "Published dart-rails gem on rubygems.org"
 date:   2014-12-13 22:46:00
-categories: dart-rails
+categories: dart dart-rails rails
 ---
 
 dart-rails
@@ -17,4 +17,3 @@ version `0.2.2`. The latest patchlevel `0.2.4` fixed some minor issues concernin
 
 Usage of the gem got quite simple, the README on github should be sufficient. I've also published an example
 application [dart-rails-example](https://github.com/m0gg/dart-rails-sample) which i need to update.
-

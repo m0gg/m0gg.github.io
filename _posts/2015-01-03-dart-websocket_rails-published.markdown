@@ -50,6 +50,7 @@ Bind to event
 `WebSocketRails` and `Channel` implement the internal `Binable` interface and thus can be bound the same ways. Currently there are two ways to bind to an event. But if you want to unbind a single event later, you'll need to choose the "dart-way".
 
 "Old"-fashioned way
+
 ```ruby
 wsCh.bind('bar', (data) {
   dyynamic m = JSON.decode(data);
@@ -58,12 +59,14 @@ wsCh.bind('bar', (data) {
 ```
 
 "dart"-way
+
 ```ruby
 StreamSubscription sc = wsCh.getEventStream('bar').listen((data) {
   dyynamic m = JSON.decode(data);
   print(m);
 });
 ```
+
 The `StreamSubscription` instance can later be `sc.cancel()`-ed to unbind a single event.
 
 
