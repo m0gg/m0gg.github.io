@@ -1,0 +1,13 @@
+---
+layout: resume
+---
+<div id="page_holder">
+</div>
+<script>
+$.getJSON('/html.json', function(data) {
+  $('#page_holder').pagify({
+    pages: data,
+    default: 'home'
+  });
+});
+</script>

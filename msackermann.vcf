@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:2.1
+N;CHARSET=UTF-8:Sackermann;Marcel
+FN;CHARSET=UTF-8:Marcel Sackermann
+ADR;HOME;POSTAL;CHARSET=UTF-8:;;Bademutterstraße 22;Wismar;;23966;Germany
+TEL;CELL;VOICE:+49 173 5173293
+EMAIL;PREF;INTERNET:marcel@m0gg.org
+EMAIL;INTERNET:gmorchel@gmail.com
+URL;HOME:https://github.com/m0gg
+BDAY:1989-10-30
+END:VCARD
+
