@@ -17,32 +17,32 @@ Now here comes something out of the current README of the master in [m0gg/dart-w
 Open a connection
 -----------------
 
-```ruby
+~~~ ruby
 WebSocketRails railsWs = new WebSocketRails('${window.location.host}/websocket')
   ..connect();
-```
+~~~
 
 Subscribe to channel
 ----------------------
 
-```ruby
+~~~ ruby
 Channel wsCh = railsWs.subscribe('foo');
-```
+~~~
 
 Trigger an Event
 ----------------
 
-```ruby
+~~~ ruby
 railsWs.trigger('music.is_votable');
 railsWs.trigger('music.is_votable', { 'data': { 'bar_id': 1 }});
-```
+~~~
 
 Trigger returns a `Future` which will be resolved when the websocket receives a response event.
 
-```ruby
+~~~ ruby
 railsWs.trigger('music.is_votable', { 'data': { 'bar_id': 1 }})
   ..then((data) => print(data));
-```
+~~~
 
 Bind to event
 -----------------
@@ -51,21 +51,21 @@ Bind to event
 
 "Old"-fashioned way
 
-```ruby
+~~~ ruby
 wsCh.bind('bar', (data) {
-  dyynamic m = JSON.decode(data);
+  dynamic m = JSON.decode(data);
   print(m);
 });
-```
+~~~
 
 "dart"-way
 
-```ruby
+~~~ ruby
 StreamSubscription sc = wsCh.getEventStream('bar').listen((data) {
-  dyynamic m = JSON.decode(data);
+  dynamic m = JSON.decode(data);
   print(m);
 });
-```
+~~~
 
 The `StreamSubscription` instance can later be `sc.cancel()`-ed to unbind a single event.
 
